@@ -39,6 +39,19 @@ function symlink_dingo_homerow_keymap() {
   fi
 }
 
+function symlink_dingo_keymap() {
+  local source_keymap="$REPO_DIR/dingo"
+  local symlink_destination="$QMK_HOME/keyboards/gboards/gergo/keymaps/dingo"
+
+  if [ ! -d "$symlink_destination" ]; then
+    echo "Symlinking keymap"
+    ln -sf "$source_keymap" "$symlink_destination"
+  else
+    echo "Keymap already in place, nothing to do"
+  fi
+}
+
 symlink_dactyl_custom_keymap
 symlink_dactyl_miryoku_keymap
 symlink_dingo_homerow_keymap
+symlink_dingo_keymap
