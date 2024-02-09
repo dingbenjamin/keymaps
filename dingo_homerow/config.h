@@ -4,5 +4,5 @@
 #define TAPPING_TERM 150
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define QUICK_TAP_TERM 0
+#define QUICK_TAP_TERM 150
 
