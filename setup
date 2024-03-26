@@ -27,9 +27,9 @@ function symlink_dactyl_miryoku_keymap() {
   fi
 }
 
-function symlink_dingo_homerow_keymap() {
-  local source_keymap="$REPO_DIR/dingo_homerow"
-  local symlink_destination="$QMK_HOME/keyboards/gboards/gergo/keymaps/dingo_homerow"
+function symlink_gergo_homerow_keymap() {
+  local source_keymap="$REPO_DIR/gergo_homerow"
+  local symlink_destination="$QMK_HOME/keyboards/gboards/gergo/keymaps/gergo_homerow"
 
   if [ ! -d "$symlink_destination" ]; then
     echo "Symlinking keymap"
@@ -39,9 +39,9 @@ function symlink_dingo_homerow_keymap() {
   fi
 }
 
-function symlink_dingo_keymap() {
-  local source_keymap="$REPO_DIR/dingo"
-  local symlink_destination="$QMK_HOME/keyboards/gboards/gergo/keymaps/dingo"
+function symlink_gergo_keymap() {
+  local source_keymap="$REPO_DIR/gergo"
+  local symlink_destination="$QMK_HOME/keyboards/gboards/gergo/keymaps/gergo"
 
   if [ ! -d "$symlink_destination" ]; then
     echo "Symlinking keymap"
@@ -53,5 +53,5 @@ function symlink_dingo_keymap() {
 
 symlink_dactyl_custom_keymap
 symlink_dactyl_miryoku_keymap
-symlink_dingo_homerow_keymap
-symlink_dingo_keymap
+symlink_gergo_homerow_keymap
+symlink_gergo_keymap
